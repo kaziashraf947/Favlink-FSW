@@ -20,7 +20,7 @@ module.exports = {
   module.exports = {
     getLinks,
   }
-  pool.query('SELECT NOW()', (err, res) => {
-    console.log(err, res);
+  pool.query('SELECT * FROM links', (err, res) => {
+    console.log(err, res.rows);
     pool.end();
   });
